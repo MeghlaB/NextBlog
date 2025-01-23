@@ -1,22 +1,22 @@
-'use server'
+
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
-import { redirect } from 'next/navigation'
+
 
 
 
 const page = async () => {
-    const session = await getKindeServerSession();
-    const { isAuthenticated } = session;
+  const { getUser } = getKindeServerSession()
+  const user = await getUser()
+  console.log('user data', user)
   
-      return (await isAuthenticated()) ? (
+  
+      return  (
         <div>
           <h1 className="text-3xl font-bold text-center my-5">
-            Welcome to your profile!
+        <span className='text-blue-600'> {user?.given_name} </span> , Welcome to Your Profile
           </h1>
         </div>
-      ) : (
-        redirect('/api/auth/login')
-      );
+      )
     };
 
 

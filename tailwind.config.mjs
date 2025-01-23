@@ -13,6 +13,10 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    plugins: [
+      require('daisyui'),
+    ],
   },
+  
  
 };

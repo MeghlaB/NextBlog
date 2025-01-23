@@ -1,4 +1,7 @@
 "use server"
+
+import Link from "next/link"
+
 const  details = async({params})=> {
     const {details} = params
     console.log(details)
@@ -9,15 +12,18 @@ const data = await res.json()
 
   return (
     <div className="">
-     <h1 className="text-xl font-bold text-center mt-6 pb-4">Post Details</h1>
+     <h1 className="text-xl font-bold text-center mt-6 pb-4 text-blue-600 ">Post Details</h1>
      <hr />
-     <div className="w-1/2 mx-auto border h-[350px] mt-4 p-8 ">
+     <div className="w-1/2 mx-auto border border-black h-[350px] mt-4 p-8 rounded-md shadow-transparent hover:shadow-lg">
       <h1 className="text-xl font-bold"> Title:{data.title}</h1>
       <p className="pt-2"><span className="text-xl font-bold">Details: </span>
 
       {data.body}</p>
-
+     <div className="mt-36 -ml-3">
+     <Link href={'/'} className="  hover:border-b-4 border border-l-indigo-300 hover:border-b-black px-4 py-2 text-blue-600 hover:text-zinc-500 rounded-lg bg-transparent bg-white">Back</Link>
      </div>
+     </div>
+    
     </div>
   )
 }
