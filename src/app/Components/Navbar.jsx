@@ -14,24 +14,24 @@ const Navbar = async () => {
         </div>
         <div>
           <ul className='flex items-center gap-3'>
-            <li><Link href='/'>
+            <li><Link href='/' className='btn-custom border-none'>
               Home
             </Link></li>
-            <li><Link prefetch href='/profile'>
+            <li><Link prefetch href='/profile' className='btn-custom border-none'>
              Profile
             </Link></li>
             {user ? (
               <>
-                <li className='btn btn-primary'><Link href='/api/auth/logout'>
+                <li ><Link href='/api/auth/logout' className='btn-custom border-none'>
                   log Out
                 </Link></li>
               </>
             ) : (
               <>
-                <li className='btn btn-primary'><Link href='/api/auth/register'>
+                <li ><Link  href="/api/auth/register" className='btn-custom border-none'>
                   signIn
                 </Link></li>
-                <li className='btn btn-primary'><Link href='/api/auth/logout'>
+                <li ><Link href='/api/auth/login' className='btn-custom border-none'>
                   signUp
                 </Link></li>
               </>
