@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+  .btn-custom {
+    @apply bg-slate-700 text-white border rounded-xl h-12 px-6 text-sm flex items-center justify-center hover:bg-slate-800 transition;
+  }
+}
+
+
+
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
