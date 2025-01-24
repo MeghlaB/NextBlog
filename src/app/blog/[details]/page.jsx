@@ -14,7 +14,7 @@ const data = await res.json()
     <div className="">
      <h1 className="text-xl font-bold text-center mt-6 pb-4 text-blue-600 ">Post Details</h1>
      <hr />
-     <div className="  lg:mx-0 w-full lg:w-1/2 mx-auto border border-black lg:h-[350px] mt-4 p-8 rounded-md shadow-transparent hover:shadow-lg">
+     <div className="mb-5 w-full lg:w-1/2 mx-auto border border-black lg:h-[350px] mt-4 p-8 rounded-md shadow-transparent hover:shadow-lg">
       <h1 className="text-xl font-bold"> Title:{data.title}</h1>
       <p className="pt-2"><span className="text-xl font-bold">Details: </span>
 

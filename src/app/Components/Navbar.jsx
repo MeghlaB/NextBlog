@@ -5,7 +5,7 @@ import DropDown from '../Components/DropDown'
 
 
 const Navbar = async () => {
-  
+
   const { getUser } = getKindeServerSession()
   const user = await getUser()
   console.log('user data', user)
@@ -15,19 +15,19 @@ const Navbar = async () => {
         <div>
           <h1 className="text-2xl">Blog</h1>
         </div>
-       <div className='inline lg:hidden'>
-       <DropDown></DropDown>
-       </div>
+        <div className='inline lg:hidden'>
+          <DropDown></DropDown>
+        </div>
         <div className='hidden lg:inline'>
           <ul className='flex items-center gap-3 py-2  '>
             <li><Link href='/' className='btn-custom border-none hidden py-4 lg:inline'>
               Home
             </Link></li>
-            {
-              user ? <li><Link prefetch href='/profile' className='btn-custom border-none hidden lg:inline py-4'>
-                Profile
-              </Link></li> : ''
-            }
+
+            <li><Link prefetch href='/profile' className='btn-custom border-none hidden lg:inline py-4'>
+              Profile
+            </Link></li>
+
             {user ? (
               <>
                 <li ><Link href='/api/auth/logout' className='btn-custom border-none hidden lg:inline py-4'>
