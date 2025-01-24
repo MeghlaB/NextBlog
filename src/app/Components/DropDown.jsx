@@ -60,7 +60,7 @@ function DropDown() {
         </li>
         <li>
           <button className='btn-custom border-none hidden lg:inline py-4'>
-            <LoginLink>SignIn</LoginLink>
+            <LoginLink>SignUp</LoginLink>
           </button>
         </li>
       </ul>
