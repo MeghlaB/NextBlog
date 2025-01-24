@@ -34,7 +34,6 @@ const Navbar = async () => {
                
                 <button className='btn-custom border-none hidden lg:inline py-4'>
                   <LogoutLink>LogOut</LogoutLink>
-              
                 </button>
               </>
             ) : (
