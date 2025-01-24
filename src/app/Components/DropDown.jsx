@@ -1,5 +1,6 @@
 'use client'
 
+import { LoginLink, LogoutLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -8,7 +9,7 @@ function DropDown() {
 
   return (
     <div className="relative">
-     
+
       <div className="lg:hidden">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -33,9 +34,8 @@ function DropDown() {
 
       {/* Dropdown Menu */}
       <ul
-        className={`absolute right-2  lg:static lg:mt-0 flex flex-col lg:flex-row items-start lg:items-center w-56 lg:w-auto bg-white border rounded-lg shadow-md  gap-3 lg:gap-5 py-2 transition-all duration-300 ${
-          isMenuOpen ? "block" : "hidden lg:flex"
-        }`}
+        className={`absolute right-2  lg:static lg:mt-0 flex flex-col lg:flex-row items-start lg:items-center w-56 lg:w-auto bg-white border rounded-lg shadow-md  gap-3 lg:gap-5 py-2 transition-all duration-300 ${isMenuOpen ? "block" : "hidden lg:flex"
+          }`}
       >
         <li>
           <Link href="/" className="px-4 py-2 hover:bg-gray-200 rounded">
@@ -48,19 +48,20 @@ function DropDown() {
           </Link>
         </li>
         <li>
-          <Link href="/api/auth/logout" className="px-4 py-2 hover:bg-gray-200 rounded">
-            Log Out
-          </Link>
+
+          <button className='btn-custom border-none hidden lg:inline py-4'>
+            <LogoutLink>LogOut</LogoutLink>
+          </button>
         </li>
         <li>
-          <Link href="/api/auth/register" className="px-4 py-2 hover:bg-gray-200 rounded">
-            Sign In
-          </Link>
+          <button className='btn-custom border-none hidden lg:inline py-4'>
+            <RegisterLink>SignIn</RegisterLink>
+          </button>
         </li>
         <li>
-          <Link href="/api/auth/login" className="px-4 py-2 hover:bg-gray-200 rounded">
-            Sign Up
-          </Link>
+          <button className='btn-custom border-none hidden lg:inline py-4'>
+            <LoginLink>SignIn</LoginLink>
+          </button>
         </li>
       </ul>
     </div>
