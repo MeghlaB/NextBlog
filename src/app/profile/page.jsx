@@ -6,7 +6,8 @@ import { redirect } from 'next/navigation'
 
 const page = async () => {
     const session = getKindeServerSession();
-    const { isAuthenticated } = session;
+    const { isAuthenticated,user } = session;
+  
     if(!(await isAuthenticated())){
       redirect('/api/auth/login')
       
@@ -14,12 +15,12 @@ const page = async () => {
   
       return  (
         <div>
-          <h1 className="text-3xl font-bold text-center my-5">
-            Welcome to your profile!
-          </h1>
-        </div>
+        <h1 className="text-3xl font-bold text-center my-5">
+        Hey, {user?.given_name || 'Guest'}! Welcome to your profile!
+      </h1>
+    </div>
       )
-    };
+    }
 
 
 export default page
