@@ -39,11 +39,11 @@ const Navbar = async () => {
             ) : (
               <>
                 <button className='btn-custom border-none hidden lg:inline py-4'>
-                  <RegisterLink>SignIn</RegisterLink>
+                  <RegisterLink>Register</RegisterLink>
                 </button>
               
                 <button className='btn-custom border-none hidden lg:inline py-4'>
-                  <LoginLink>SignUp</LoginLink>
+                  <LoginLink>Login</LoginLink>
                 </button>
               </>
             )}
