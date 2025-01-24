@@ -49,17 +49,17 @@ function DropDown() {
         </li>
         <li>
 
-          <button className='btn-custom border-none hidden lg:inline py-4'>
+          <button className=' text-black btn-custom border-none hidden lg:inline py-4'>
             <LogoutLink>LogOut</LogoutLink>
           </button>
         </li>
         <li>
-          <button className='btn-custom border-none hidden lg:inline py-4'>
+          <button className=' text-black btn-custom border-none hidden lg:inline py-4'>
             <RegisterLink>SignIn</RegisterLink>
           </button>
         </li>
         <li>
-          <button className='btn-custom border-none hidden lg:inline py-4'>
+          <button className=' text-black btn-custom border-none hidden lg:inline py-4'>
             <LoginLink>SignUp</LoginLink>
           </button>
         </li>
