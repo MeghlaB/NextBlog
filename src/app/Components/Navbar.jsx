@@ -31,9 +31,6 @@ const Navbar = async () => {
             {user ? (
               <>
 
-                {/* <Link href='/api/auth/logout' className='btn-custom border-none hidden lg:inline py-4'>
-                  log Out
-                </Link> */}
 
                 <button className='btn-custom border-none hidden lg:inline py-4'>
                   <LogoutLink>LogOut</LogoutLink>
@@ -44,12 +41,7 @@ const Navbar = async () => {
                 <button className='btn-custom border-none hidden lg:inline py-4'>
                   <RegisterLink>SignIn</RegisterLink>
                 </button>
-                {/* <li ><Link href="/api/auth/register" '>
-                  signIn
-                </Link></li> */}
-                {/* <li ><Link href='/api/auth/login' className='btn-custom border-none hidden lg:inline py-4'>
-                  signUp
-                </Link></li> */}
+              
                 <button className='btn-custom border-none hidden lg:inline py-4'>
                   <LoginLink>SignUp</LoginLink>
                 </button>
