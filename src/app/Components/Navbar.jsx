@@ -1,5 +1,5 @@
 "use server"
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+import { getKindeServerSession, LoginLink, LogoutLink, RegisterLink } from '@kinde-oss/kinde-auth-nextjs/server';
 import Link from 'next/link';
 import DropDown from '../Components/DropDown'
 
@@ -30,18 +30,29 @@ const Navbar = async () => {
 
             {user ? (
               <>
-                <li ><Link href='/api/auth/logout' className='btn-custom border-none hidden lg:inline py-4'>
+
+                {/* <Link href='/api/auth/logout' className='btn-custom border-none hidden lg:inline py-4'>
                   log Out
-                </Link></li>
+                </Link> */}
+
+                <button className='btn-custom border-none hidden lg:inline py-4'>
+                  <LogoutLink>LogOut</LogoutLink>
+                </button>
               </>
             ) : (
               <>
-                <li ><Link href="/api/auth/register" className='btn-custom border-none hidden lg:inline py-4'>
+                <button className='btn-custom border-none hidden lg:inline py-4'>
+                  <RegisterLink>SignIn</RegisterLink>
+                </button>
+                {/* <li ><Link href="/api/auth/register" '>
                   signIn
-                </Link></li>
-                <li ><Link href='/api/auth/login' className='btn-custom border-none hidden lg:inline py-4'>
+                </Link></li> */}
+                {/* <li ><Link href='/api/auth/login' className='btn-custom border-none hidden lg:inline py-4'>
                   signUp
-                </Link></li>
+                </Link></li> */}
+                <button className='btn-custom border-none hidden lg:inline py-4'>
+                  <LoginLink>SignIn</LoginLink>
+                </button>
               </>
             )}
 

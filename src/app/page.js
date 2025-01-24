@@ -6,6 +6,7 @@ const Home = async () => {
 
   return (
    <div>
+    <h1 className="text-2xl font-bold text-center m-5 underline text-blue-500">Home Page</h1>
      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5 mb-3">
       {data.map((post) => (
         <Card key={post.id} title={post.title} description={post.body} id={post.id} />
