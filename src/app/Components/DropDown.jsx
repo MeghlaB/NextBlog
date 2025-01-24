@@ -47,16 +47,16 @@ function DropDown() {
             Profile
           </Link>
         </li>
-        <li className=' text-black btn-custom border-none hidden lg:inline py-4'>
-            <LogoutLink>LogOut</LogoutLink>
+        <li className="px-4 py-2 hover:bg-gray-200 rounded">
+          <LogoutLink>LogOut</LogoutLink>
        
         </li>
-        <li className=' text-black btn-custom border-none hidden lg:inline py-4'>
+        <li className="px-4 py-2 hover:bg-gray-200 rounded">
          
             <RegisterLink>SignIn</RegisterLink>
          
         </li>
-        <li className=' text-black btn-custom border-none hidden lg:inline py-4'>
+        <li className="px-4 py-2 hover:bg-gray-200 rounded">
          
             <LoginLink>SignUp</LoginLink>
           
